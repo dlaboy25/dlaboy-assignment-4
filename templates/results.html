@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results for "{{ query }}"</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Latent Semantic Analysis (LSA) Search Engine</h1>
+    </header>
+    <div class="container">
+        <form method="post" action="{{ url_for('index') }}">
+            <input type="text" name="query" placeholder="Enter your query here" required>
+            <input type="submit" value="Search">
+        </form>
+
+        <div class="results">
+            <h2>Search Results for "{{ query }}"</h2>
+            <h3>Top 5 Documents</h3>
+            <ul>
+                {% for doc, score in top_docs %}
+                <li>
+                    <p><strong>Similarity Score:</strong> {{ "%.4f"|format(score) }}</p>
+                    <p>{{ doc }}</p>
+                    <hr>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="bar-chart">
+            <h3>Similarity Scores Bar Chart</h3>
+            <img src="{{ url_for('static', filename='plot.png') }}" alt="Bar Chart">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 LSA Search Engine</p>
+    </footer>
+</body>
+</html>

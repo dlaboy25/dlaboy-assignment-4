@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #3f51b5;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Form Styles */
+form {
+    margin: 20px 0;
+    text-align: center;
+}
+
+form input[type="text"] {
+    width: 60%;
+    padding: 12px 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    padding: 12px 20px;
+    background-color: #3f51b5;
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #303f9f;
+}
+
+/* Results Styles */
+.results {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.results h2 {
+    color: #333333;
+    border-bottom: 2px solid #3f51b5;
+    padding-bottom: 10px;
+}
+
+.results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.results li {
+    margin-bottom: 20px;
+}
+
+.results p {
+    color: #555555;
+    line-height: 1.6;
+}
+
+.results hr {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+
+/* Bar Chart Styles */
+.bar-chart {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bar-chart img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #3f51b5;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Link Styles */
+a {
+    color: #3f51b5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Back Link Styles */
+.back-link {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    form input[type="text"] {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    form input[type="submit"] {
+        width: 50%;
+    }
+}
